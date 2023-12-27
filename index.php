@@ -148,18 +148,30 @@ if ($conn->connect_error) {
 
 
 
-  $sql="INSERT INTO admin (email,password)
+  $sql="INSERT INTO admin (`email`,`password`)
 VALUES
 ('$email','$password')";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($sql) === TRUE) 
 
-  echo '<script>
-  alert("Data Inserted Successfully");
-  </script>';
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+
+  {
+    echo'
+    <script>
+    alert("Data added");
+    
+    </script>';
+  }
+  else
+  {
+    echo'
+    <script>
+    alert("Try again");
+    
+    </script>';
+  }
+
+
 
 $conn->close();
 
