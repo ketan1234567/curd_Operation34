@@ -129,8 +129,13 @@ $username = "root";
 $password23 = "";
 $dbname = "myDB";
 
-$email= $_POST['email'];
-$password= $_POST['password'];
+
+  $email= $_POST['email'];
+  $password= $_POST['password'];
+
+
+
+
 
 
 
@@ -148,7 +153,7 @@ VALUES
 ('$email','$password')";
 
 if ($conn->query($sql) === TRUE) {
-  
+
   echo '<script>
   alert("Data Inserted Successfully");
   </script>';
